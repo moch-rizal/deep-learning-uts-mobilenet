@@ -69,7 +69,6 @@ def main():
                     probabilities = torch.nn.functional.softmax(output, dim=1)[0]
                     confidence, idx = torch.max(probabilities, 0)
                 
-                # Labeling (sesuaikan dengan urutan folder dataset)
                 labels = ['Anjing', 'Kucing'] 
                 result = labels[idx.item()]
                 

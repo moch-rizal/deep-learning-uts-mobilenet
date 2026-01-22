@@ -1,45 +1,43 @@
-# Klasifikasi Gambar Kucing dan Anjing Menggunakan MobileNet
+# Klasifikasi Citra: Anjing vs Kucing (MobileNetV2)
 
-## Deskripsi
+Repository ini berisi implementasi model Deep Learning menggunakan arsitektur **MobileNetV2** (Transfer Learning) untuk membedakan gambar anjing dan kucing.
 
-Proyek ini merupakan tugas UTS mata kuliah Deep Learning. Model menggunakan arsitektur MobileNetV2 berbasis transfer learning untuk melakukan klasifikasi dua kelas gambar, yaitu kucing dan anjing. Dataset menggunakan struktur folder `train` dan `test`, masing-masing berisi folder `kucing` dan `anjing`. Model dilatih menggunakan Google Colab dengan GPU T4 dan mencapai akurasi test sekitar 96%.
+Proyek ini dibuat untuk memenuhi tugas mata kuliah Deep Learning. Selain script latihan model (Jupyter Notebook), repo ini sekarang dilengkapi aplikasi web sederhana menggunakan **Streamlit** agar bisa dicoba langsung untuk prediksi gambar.
+
+## Fitur
+- Klasifikasi citra binary (Anjing atau Kucing)
+- Menampilkan skor confidence (seberapa yakin modelnya)
+- Interface web sederhana (tinggal upload foto)
+
+## Dataset
+Dataset yang digunakan berasal dari Kaggle: [Link Dataset](https://www.kaggle.com/datasets/citranurjanah/kucing-dan-anjing-uas-ai).
+Model dilatih menggunakan data yang dibagi menjadi folder `train` dan `test`.
+
+## Cara Menjalankan Web App
+Pastikan Python sudah terinstall di laptop.
+
+1. **Install Library**
+   Install library pendukung (PyTorch, Streamlit, dll) lewat terminal:
+   ```bash
+   pip install streamlit torch torchvision pillow numpy
+   ```
+
+2. **Jalankan Aplikasi**
+   Pastikan file model `model_anjingkucing_mobilenet.pt` sudah ada dalam satu folder, lalu jalankan:
+   ```bash
+   streamlit run app.py
+   ```
+
+3. **Gunakan**
+   Website akan terbuka otomatis di browser. Cukup upload gambar format JPG/PNG untuk melihat hasil prediksinya.
+
+## Performa Model
+Model dilatih di Google Colab menggunakan GPU T4.
+- **Akurasi Test**: 96.15%
+- **Arsitektur**: MobileNetV2 (Pretrained ImageNet)
+- **Metode**: Fine-tuning classifier head
 
 ---
-
-## Struktur Dataset
-* dataset bisa di download melalui link berikut : https://www.kaggle.com/datasets/citranurjanah/kucing-dan-anjing-uas-ai
-* Struktur folder dataset yang digunakan oleh notebook adalah sebagai berikut:
-
-```
-dataset/
-├── train/
-│   ├── kucing/
-│   └── anjing/
-└── test/
-    ├── kucing/
-    └── anjing/
-```
-
----
-
-## Cara Menjalankan
-
-1.  Buka notebook `UTS_AnjingKucing_MobileNetV2.ipynb` di Google Colab.
-2.  Aktifkan runtime GPU (`Runtime` > `Change runtime type` > `Hardware accelerator` > `GPU`).
-3.  Jalankan semua cell secara berurutan.
-
----
-
-## Hasil Model
-
-* **Akurasi Test:** 96.15%
-* **Jumlah kelas:** 2 (Cat & Dog)
-* Precision, recall, dan F1-score di atas 0.95 pada kedua kelas.
-* Confusion matrix menunjukkan prediksi benar pada hampir semua sampel.
-
----
-
-## Identitas Mahasiswa
-
+**Identitas Mahasiswa**
 * **Nama:** Moch. Arif Samsul Rizal
 * **NIM:** 202211420083
