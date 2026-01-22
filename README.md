@@ -14,11 +14,11 @@ Dataset yang digunakan berasal dari Kaggle: [Link Dataset](https://www.kaggle.co
 Model dilatih menggunakan data yang dibagi menjadi folder `train` dan `test`.
 
 ### Preview Aplikasi
-![Tampilan awal](tampilan awal.png)
+![Tampilan awal](tampilan-awal.png)
 
-![Tampilan upload](tampilan upload.png)
+![Tampilan upload](tampilan-upload.png)
 
-![Tampilan hasil prediksi](tampilan hasil.png)
+![Tampilan hasil prediksi](tampilan-hasil.png)
 
 
 ## Cara Menjalankan Web App
