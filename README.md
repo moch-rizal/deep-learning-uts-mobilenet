@@ -13,11 +13,15 @@ Proyek ini dibuat untuk memenuhi tugas mata kuliah Deep Learning. Selain script 
 Dataset yang digunakan berasal dari Kaggle: [Link Dataset](https://www.kaggle.com/datasets/citranurjanah/kucing-dan-anjing-uas-ai).
 Model dilatih menggunakan data yang dibagi menjadi folder `train` dan `test`.
 
-### Preview Aplikasi
+## 🖼️ Tampilan Aplikasi
+
+### Halaman Awal
 ![Tampilan awal](tampilan-awal.png)
 
+### Halaman Upload Citra
 ![Tampilan upload](tampilan-upload.png)
 
+### Hasil Prediksi
 ![Tampilan hasil prediksi](tampilan-hasil.png)
 
 
